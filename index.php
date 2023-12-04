@@ -35,20 +35,26 @@
 				<?php
 
 				$do=$_GET['do']??'main';
-				switch($do){
-					case "login":
-						include "./front/login.php";
-					break;
-					case "main":
-						include "./front/main.php";
-					break;
-					case "news":
-						include "./front/news.php";
-					break; 
-				//  在瀏覽器搜尋時亂打時,使用[default]頁面一樣會載入main
-					default:
+				$file="./front/{$do}.php";
+				if(file_exists($file)){
+					include $file;
+				}else{
 					include "./front/main.php";
 				}
+				// switch($do){
+				// 	case "login":
+				// 		include "./front/login.php";
+				// 	break;
+				// 	case "main":
+				// 		include "./front/main.php";
+				// 	break;
+				// 	case "news":
+				// 		include "./front/news.php";
+				// 	break; 
+				// //  在瀏覽器搜尋[?do=login]亂打時,使用[default]頁面一樣會載入main頁面
+				// 	default:
+				// 	include "./front/main.php";
+				// }
 			
 			
 
