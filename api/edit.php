@@ -37,8 +37,10 @@ foreach ($_POST['id'] as $key => $id) {
                 $row['pw'] = $_POST['pw'][$key];
                 break;
             case "menu":
+                $row['href']=$_POST['href'][$key];
+                $row['sh'] = (isset($_POST['sh']) && in_array($id, $_POST['sh'])) ? 1 : 0;
                 // 在 'menu' 資料表中沒有特別處理
-                break;
+             break;
             default:
                 // 如果 'sh' 在 $_POST 中並且 $id 在 'sh' 中，則設定 'sh' 為 1，否則為 0
                 $row['sh'] = (isset($_POST['sh']) && in_array($id, $_POST['sh'])) ? 1 : 0;
