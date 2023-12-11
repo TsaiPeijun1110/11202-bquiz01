@@ -8,8 +8,7 @@
                     <td width="10%">顯示</td>
                     <td width="10%">刪除</td>
                 </tr>
-                <?php
-                
+                <?php               
                 $rows=$DB->all();
                 foreach($rows as $row){
                 ?>
