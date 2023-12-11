@@ -1,5 +1,5 @@
-<?php
-include_once "db.php";
+<?php include_once "db.php";
+
 $table=$_POST['table'];
 $DB=${ucfirst($table)};
 unset($_POST['table']);
@@ -13,11 +13,10 @@ foreach($_POST['text'] as $id => $text){
         if($table=='title'){
             $row['sh']=(isset($_POST['sh']) && $_POST['sh']==$id)?1:0;
         }else{
-        $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
-        }   
+            $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+        }
         $DB->save($row);
     }
 }
-to("../back.php?do=$table");
-?>
 
+to("../back.php?do=$table");

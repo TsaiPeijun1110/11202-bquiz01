@@ -8,7 +8,7 @@
     </tr>
     <tr>
         <td>標題區替代文字</td>
-        <td ><input type="text" name="text" id=""></td>
+        <td><input type="text" name="text" id=""></td>
     </tr>
 </table>
 <div>
@@ -17,5 +17,4 @@
     <input type="reset" value="重置">
 </div>
 
-</form>
 </form>

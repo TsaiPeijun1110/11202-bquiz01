@@ -4,7 +4,7 @@
 <table>
     <tr>
         <td>動態文字廣告</td>
-        <td><input type="file" name="img" id=""></td>
+        <td><input type="text" name="text" id=""></td>
     </tr>
 </table>
 <div>
@@ -13,5 +13,4 @@
     <input type="reset" value="重置">
 </div>
 
-</form>
 </form>
