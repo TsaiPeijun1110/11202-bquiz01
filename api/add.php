@@ -10,6 +10,8 @@ if(isset($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
 }
 
+
+
 unset($_POST['table']);
 $DB->save($_POST);
 
