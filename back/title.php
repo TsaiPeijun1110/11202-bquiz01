@@ -10,8 +10,8 @@
                     <td width="7%">刪除</td>
                     <td></td>
                 </tr>
-                <?php
-                $rows=$Title->all();
+                <?php                
+                $rows=$DB->all();
                 foreach($rows as $row){
                 ?>
                 <tr>
