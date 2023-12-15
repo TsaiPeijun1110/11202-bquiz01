@@ -35,6 +35,13 @@
     </script>
     <div style="width:95%; padding:2px; height:190px; margin-top:10px; padding:5px 10px 5px 10px; border:#0C3 dashed 3px; position:relative;">
         <span class="t botli">最新消息區
+            <?php
+            if($News->count(['sh'=>1])>5){
+                echo "<a href='?do=news' style='float: right;'>More...</a>";
+            }
+            
+            ?>
+            
         </span>
         <ul class="ssaa" style="list-style-type:decimal;">
         <?php
@@ -42,6 +49,9 @@
             foreach($news as $n){
                 echo "<li>";
                 echo mb_substr($n['text'],0,20);
+                echo "<div class='all' style='display:none'>";
+                echo $n['text'];
+                echo "</div>";
                 echo "...</li>";
             }
 
