@@ -17,20 +17,17 @@
     <tr>
         </tr>
         <td><input type="text" name="text[]" value="<?=$sub['text'];?>"></td>
-        <td><input type="text" name="href[]" value="<?=$sub['href'];?>">></td>
+        <td><input type="text" name="href[]" value="<?=$sub['href'];?>"></td>
         <td><input type="checkbox" name="del[]" value="<?=$sub['id'];?>"></td>
         <input type="hidden" name="id[]" value="<?=$sub['id'];?>">
     </tr>
     <?php
     }
     ?>
-    <tr>
-    <td><input type="text" name="add_text[]" id=""></td>
-    <td><input type="text" name="add_href[]" id=""></td>
-    </tr>
 </table>
 <div>
     <input type="hidden" name="table" value="<?=$_GET['table'];?>">
+    <input type="hidden" name="menu_id" value="<?=$_GET['id'];?>">
     <input type="submit" value="修改確定">
     <input type="reset" value="重置">
     <input type="button" value="更多次選單" onclick="more()">
