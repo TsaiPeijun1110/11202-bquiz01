@@ -50,8 +50,19 @@
                 	<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=login&#39;)">管理登入</button>
                 	<div style="width:89%; height:480px;" class="dbor">
                     	<span class="t botli">校園映象區</span>
-						                        <script>
-                        	var nowpage=0,num=0;
+					    <?php
+						$imgs=$Image->all(['sh'=>1 ]);
+
+						foreach($imgs as $idx => $img){
+							?>
+							<div id="ssaa<?=$idx;?>" class='im'>
+								<img src="./img/<?=$img['img'];?>" style="width:150px;height:103px">
+							</div>
+						<?php
+						}
+						?>
+						<script>
+                        	var nowpage=1,num=0;
 							function pp(x)
 							{
 								var s,t;
